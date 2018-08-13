@@ -1,11 +1,11 @@
 $( function() {
-  $( "#click-me" ).draggable();
+  $( "#clickMe" ).draggable();
 } );
 
 for (var i=1; i <= 3; i++) {
 	var x = Math.max(0, Math.min(60, Math.ceil(Math.random() * 100)));
 	var y = Math.max(0, Math.min(60, Math.ceil(Math.random() * 100)));
-	$('#click-me').css({
+	$('#clickMe').css({
 		top: y + '%',
 		left: x + '%'
 	}).appendTo('body');

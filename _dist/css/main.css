@@ -30,17 +30,18 @@ body h1 {
   font-size: 4em;
   line-height: 1.5em; }
 
-#click-me {
-  background: red;
+#clickMe {
   height: 64px;
   width: 64px;
-  position: absolute;
+  position: fixed;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white; }
-  #click-me h5 {
+  color: white;
+  z-index: 2;
+  border: solid 1px white; }
+  #clickMe h5 {
     color: white; }
 
 .pad {
@@ -139,7 +140,7 @@ li {
   background-size: cover;
   background-position: center; }
 
-.container-test {
+.container {
   display: grid;
   grid-template-columns: 2fr 1fr 2fr 2fr 2fr 1fr 40px;
   grid-template-rows: 1fr 1fr;
@@ -289,24 +290,46 @@ li {
 .black:hover {
   background: red; }
 
-#red-modal {
+.overlay {
   display: none;
-  z-index: 1000;
+  position: absolute;
+  z-index: 1;
   background: rgba(255, 0, 0, 0.8);
   height: 100vh;
-  width: 356vh;
-  color: white;
-  padding: .75em;
-  margin: 0;
-  padding: 0; }
-  #red-modal ::selection {
+  width: 2512px;
+  color: white; }
+  .overlay ::selection {
     background: black;
     color: white; }
-  #red-modal h1 {
+  .overlay h1 {
     font-size: 4em;
-    padding: 1em; }
+    padding: 1.5em; }
 
-.open {
+.blue {
   display: block; }
+
+.noScroll {
+  position: fixed; }
+
+.invert {
+  background: red; }
+
+.invertClickMe {
+  background: black; }
+
+@media screen and (max-width: 600px) {
+  .container-test {
+    display: grid;
+    grid-template-columns: 100vw 100vw 100vw 100vw 100vw 100vw 20vw;
+    grid-template-rows: 1fr 1fr;
+    height: 99.9vh;
+    width: auto; }
+
+  .overlay {
+    width: 100vw;
+    position: fixed; }
+    .overlay h1 {
+      font-size: 1.5em;
+      padding: 1.5em; } }
 
 /*# sourceMappingURL=main.css.map */

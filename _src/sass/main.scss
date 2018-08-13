@@ -37,18 +37,21 @@ body{
 
 }
 //---------- RANDOM ----------//
-#click-me{
-  background: red;
+#clickMe{
+  // background: red;
   height: 64px; width: 64px;
-  position: absolute;
+  position: fixed;
   border-radius: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   color:white;
   h5{color:white;}
+  z-index: 2;
+  border: solid 1px white;
 
 }
+
 //---------- LAYOUT ----------//
 .pad{
   padding: .5em;
@@ -156,7 +159,7 @@ li{
   background-position: center;
 }
 
-.container-test{
+.container{
   display: grid;
   // grid-template-columns:424px 256px 512px 512px 512px 256px 40px;
   grid-template-columns:2fr 1fr 2fr 2fr 2fr 1fr 40px;
@@ -356,21 +359,67 @@ li{
   background: red;
 }
 //---------- MODAL ----------//
-#red-modal{
-  display: none;
-  ::selection { background: black; color: white;}
-  z-index: 1000;
-  background: rgba(255, 0, 0, 0.8);
-  height: 100vh; width: 356vh;
-  color: white;
-  padding: .75em;
-  margin: 0;
-  padding: 0;
-  h1{
-    font-size: 4em;
-    padding: 1em;
-  }
+.overlay {
+    display: none;
+    position: absolute;
+
+    ::selection { background: black; color: white;}
+    z-index: 1;
+    background: rgba(255, 0, 0, 0.8);
+    height: 100vh; width: 2512px;
+    color: white;
+    h1{
+      font-size: 4em;
+      padding: 1.5em;
+    }
 }
-.open{
+.blue{
   display: block;
+}
+.noScroll{
+  position: fixed;
+}
+.invert{
+  background: red;
+}
+.invertClickMe{
+  background: black;
+}
+// .overlay a {
+//     padding: 8px;
+//     text-decoration: none;
+//     font-size: 36px;
+//     color: black;
+//     display: block;
+//     transition: 0.3s;
+// }
+//
+// .overlay a:hover, .overlay a:focus {
+//     color: white;
+// }
+//
+// .overlay .closebtn {
+//     position: absolute;
+//     top: 20px;
+//     right: 45px;
+//     font-size: 60px;
+// }
+
+//---------- MOBILE ----------//
+@media screen and (max-width: 600px) {
+  .container-test{
+    display: grid;
+    // grid-template-columns:424px 256px 512px 512px 512px 256px 40px;
+    grid-template-columns:100vw 100vw  100vw  100vw  100vw  100vw 20vw ;
+    grid-template-rows:1fr 1fr;
+    height: 99.9vh; width: auto;
+  }
+  .overlay{
+    width: 100vw;
+    position: fixed;
+    h1{
+      font-size: 1.5em;
+      padding: 1.5em;
+    }
+  }
 }

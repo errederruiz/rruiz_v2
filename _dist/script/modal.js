@@ -1,8 +1,7 @@
 $(document).ready(function(){
-  $('#click-me').on('click', function(){
-    $('#red-modal').toggleID('open');
-  });
-  $('.close').on('click', function(){
-    $('#red-modal').removeClass('open');
-  });
+    $("#clickMe").click(function(){
+        $(".overlay").toggleClass("blue");
+        $(".container").toggleClass("noScroll");
+        $(".invert").toggleClass("invertClickMe");
+    });
 });
