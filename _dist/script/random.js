@@ -12,7 +12,7 @@ for (var i=1; i <= 3; i++) {
 }
 
 
-// $('#click-me').hover(
+// $('#clickMe').hover(
 //     function() {
 //         var glyph = new Array('✌︎', '☝︎', '✍︎', '☜', '☞','♔','♕','♖','♗','♘','☹︎','✎','✏︎','✐','☕︎','⚅','⚄','⚃','⚂','⚁','⚀');
 //         var x = glyph.length;
@@ -28,7 +28,7 @@ for (var i=1; i <= 3; i++) {
 //     }
 // );
 
-// $('#click-me').hover(
+// $('#clickMe').hover(
 //   function() {
 //     var example = ['✌︎', '☝︎', '✍︎', '☜', '☞','♔','♕','♖','♗','♘','☹︎','✎','✏︎','✐','☕︎','⚅','⚄','⚃','⚂','⚁','⚀'];
 //
@@ -36,7 +36,7 @@ for (var i=1; i <= 3; i++) {
 //     function textSequence(i) {
 //       if (example.length > i) {
 //           setTimeout(function() {
-//             document.getElementById("click-me").innerHTML = example[i];
+//             document.getElementById("clickMe").innerHTML = example[i];
 //             textSequence(++i);
 //           }, 700); // 1 second (in milliseconds)
 //       } else if (example.length == i) { // Loop
