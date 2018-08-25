@@ -333,7 +333,8 @@ li {
     color: black; }
 
 .blue {
-  display: block; }
+  display: flex;
+  align-items: center; }
 
 .noScroll {
   position: fixed; }
@@ -344,25 +345,60 @@ li {
 .invertClickMe {
   background: black; }
 
-.dropdown {
-  opacity: 0;
+.popUp {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
   position: fixed;
   overflow: hidden;
-  display: none;
   z-index: -1; }
+  .popUp div {
+    align-self: center;
+    height: 500px;
+    width: 1000px;
+    background-size: cover;
+    background-position: center; }
 
-.trigger-enter .dropdown {
-  display: block; }
+#popUpImg1 {
+  display: none;
+  background: white; }
 
-.trigger-enter-active .dropdown {
-  opacity: 1; }
+#popUpImg2 {
+  display: none;
+  background: #797102; }
 
-.popImgOne {
-  height: 500px;
-  width: 1000px;
-  background-image: url("../../_dist/img/doggy.jpg");
-  background-size: cover;
-  background-position: center; }
+#popUpImg3 {
+  display: none;
+  background: #ff00ea; }
+
+#popUpImg4 {
+  display: none;
+  background: #00eeff; }
+
+#popUpImg5 {
+  display: none;
+  background: grey; }
+
+#popUpImg6 {
+  display: none;
+  background: orange; }
+
+#popUpImg7 {
+  display: none;
+  background: yellow; }
+
+#popUpImg8 {
+  display: none;
+  background: blue; }
+
+#popUpImg9 {
+  display: none;
+  background: #00ff2a; }
+
+#popUpImg10 {
+  display: none;
+  background: #08007a; }
 
 @media screen and (max-width: 600px) {
   .container-test {

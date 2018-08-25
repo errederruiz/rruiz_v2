@@ -406,7 +406,8 @@ li{
     a:hover{ color: black;}
 }
 .blue{
-  display: block;
+  display: flex;
+  align-items: center;
 }
 .noScroll{
   position: fixed;
@@ -418,29 +419,72 @@ li{
   background: black;
 }
 
-.dropdown {
-  opacity: 0;
+.popUp {
+  display: flex;
+  justify-content: center;
+
+  width: 100vw; height: 100vh;
   position: fixed;
   overflow: hidden;
-  display: none;
+  // display: none;
   z-index: -1;
+  div{
+    align-self: center;
+    height: 500px; width: 1000px;
+    background-size: cover;
+    background-position: center;
+  }
 }
 
-.trigger-enter .dropdown {
-  display: block;
+#popUpImg1{
+  display: none;
+  background: white;
 }
 
-.trigger-enter-active .dropdown {
-  opacity: 1;
+#popUpImg2{
+  display: none;
+  background: rgb(121, 113, 2);
 }
 
-.popImgOne{
-  height: 500px; width: 1000px;
-  background-image: url("../../_dist/img/doggy.jpg");
-  background-size: cover;
-  background-position: center;
+#popUpImg3{
+  display: none;
+  background: rgb(255, 0, 234);
 }
 
+#popUpImg4{
+  display: none;
+  background: rgb(0, 238, 255);
+}
+
+#popUpImg5{
+  display: none;
+  background: grey;
+}
+
+#popUpImg6{
+  display: none;
+  background: orange;
+}
+
+#popUpImg7{
+  display: none;
+  background: yellow;
+}
+
+#popUpImg8{
+  display: none;
+  background: blue;
+}
+
+#popUpImg9{
+  display: none;
+  background: rgb(0, 255, 42);
+}
+  
+#popUpImg10{
+  display: none;
+  background: rgb(8, 0, 122);
+}
 
 //---------- MOBILE ----------//
 @media screen and (max-width: 600px) {
